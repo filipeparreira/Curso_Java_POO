@@ -6,7 +6,6 @@ package classes;
 
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 
 /**
  *
@@ -35,6 +34,8 @@ public class telaIdade extends javax.swing.JFrame {
         txtAN = new javax.swing.JSpinner();
         jLabel2 = new javax.swing.JLabel();
         lblIdade = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        lblAnoAtual = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,11 +52,23 @@ public class telaIdade extends javax.swing.JFrame {
         txtAN.setModel(new javax.swing.SpinnerNumberModel(1500, 1500, 2023, 1));
 
         jLabel2.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
-        jLabel2.setText("Idade");
+        jLabel2.setText("No final desse ano sua idade será");
 
         lblIdade.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         lblIdade.setForeground(new java.awt.Color(0, 0, 255));
         lblIdade.setText("0");
+
+        jLabel3.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jLabel3.setText("Ano Atual:");
+
+        lblAnoAtual.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        lblAnoAtual.setForeground(new java.awt.Color(255, 0, 0));
+        lblAnoAtual.setText("jLabel4");
+        lblAnoAtual.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                lblAnoAtualPropertyChange(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,29 +77,40 @@ public class telaIdade extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtAN, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel2)
-                        .addGap(30, 30, 30)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCalc)
-                            .addComponent(lblIdade, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(23, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblAnoAtual))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtAN, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(158, 158, 158)
+                        .addComponent(btnCalc)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(lblAnoAtual))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(txtAN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
                 .addComponent(btnCalc)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(lblIdade))
@@ -102,10 +126,20 @@ public class telaIdade extends javax.swing.JFrame {
         Calendar calendar = Calendar.getInstance();
         int ano = Integer.parseInt(txtAN.getValue().toString());
         calendar.setTime(localDate);
-        int anoSys = calendar.get(Calendar.YEAR);
+        Integer anoSys = calendar.get(Calendar.YEAR);
         Integer idade = anoSys - ano;
+        lblAnoAtual.setText(anoSys.toString());
         lblIdade.setText(idade.toString());
     }//GEN-LAST:event_btnCalcActionPerformed
+
+    private void lblAnoAtualPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_lblAnoAtualPropertyChange
+        // TODO add your handling code here:
+        Date localDate = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(localDate);
+        Integer anoSys = calendar.get(Calendar.YEAR);
+        lblAnoAtual.setText(anoSys.toString());
+    }//GEN-LAST:event_lblAnoAtualPropertyChange
 
     /**
      * @param args the command line arguments
@@ -146,6 +180,8 @@ public class telaIdade extends javax.swing.JFrame {
     private javax.swing.JButton btnCalc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblAnoAtual;
     private javax.swing.JLabel lblIdade;
     private javax.swing.JSpinner txtAN;
     // End of variables declaration//GEN-END:variables
