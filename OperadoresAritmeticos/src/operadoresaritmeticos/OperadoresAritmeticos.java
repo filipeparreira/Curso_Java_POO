@@ -8,6 +8,9 @@ public class OperadoresAritmeticos {
         int n2 = 3;
         float media = n1 + n2 / 2;
         System.out.println("A média é: " + media);
+        int numero = 5;
+        numero--;
+        System.out.println(numero);
     }
     
 }
