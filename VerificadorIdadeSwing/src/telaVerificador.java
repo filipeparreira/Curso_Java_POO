@@ -109,7 +109,8 @@ public class telaVerificador extends javax.swing.JFrame {
         int ano = Integer.parseInt(txtAno.toString());
         Integer idade = 2023 - ano;
         lblIdade.setText(idade.toString());
-        
+        String sit = (idade > 18)?"MAIOR DE IDADE":"MENOR DE IDADE";
+        lblSit.setText(sit);
     }//GEN-LAST:event_btnCalcActionPerformed
 
     /**
