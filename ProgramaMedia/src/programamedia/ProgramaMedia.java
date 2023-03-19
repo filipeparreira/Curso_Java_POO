@@ -39,15 +39,52 @@ public class ProgramaMedia {
         *       System.out.println("Menor");
         *   }
         */
-        System.out.print("Digite um numero inteiro: ");
-        int num = teclado.nextInt();
-        int res = num % 2;
-        if (res == 1){
-            System.out.println("O numero digitado não é par :(");
-        }else{
-            System.out.println("O numero digitado é par  :)");
-        }
+        /*---------------Virifica par---------------------------------
+        *   System.out.print("Digite um numero inteiro: ");
+        *   int num = teclado.nextInt();
+        *   int res = num % 2;
+        *   if (res == 1){
+        *       System.out.println("O numero digitado não é par :(");
+        *   }else{
+        *       System.out.println("O numero digitado é par  :)");
+        *   }
         
+        
+        */
+        /*-----------------Verifica Voto-----------------------------
+        *    System.out.print("Digite seu ano de nascimento: ");
+        *    int ano = teclado.nextInt();
+        *    int idade = 2023 - ano;
+        *    System.out.println("Sua idade é: " + idade + " anos");
+        *    if (idade < 16){
+        *        System.out.println("Você não pode votar!!");
+        *    }else{
+        *        if ((idade >= 16 && idade < 18) || (idade > 70)){
+        *            System.out.println("Seu voto é opicional.");
+        *        }else{
+        *            System.out.println("Seu voto é obrigatorio!!!!");
+        *        }
+        }*/
+        System.out.print("Digite o numero de pernas do ser: ");
+        int pernas = teclado.nextInt();
+        String tipo;
+        switch (pernas){
+            case 1:
+                tipo = "Saci";
+                break;
+            case 2:
+                tipo = "Bípede";
+                break;
+            case 4:
+                tipo = "Quadrúpede";
+                break;
+            case 6, 8:
+                tipo = "Aranha";
+                break;
+            default:
+                tipo = "ET";
+        }   
+        System.out.println("O tipo do ser é: " + tipo);
     }
     
 }
