@@ -27,7 +27,7 @@ public class Repeticao {
             System.out.println("Cambalhota " + cc);
         }
         */
-        //--------------Do While---------------
+        /*--------------Do While---------------
         int num, soma=0;
         String res;
         Scanner teclado = new Scanner(System.in);
@@ -39,6 +39,11 @@ public class Repeticao {
             res = teclado.next();
         }while(res.equals("s"));        
         System.out.println("A soma de todos os numeros digitados é: " + soma);
+        */
+        //---------------For--------------------
+        for(int cc = 1; cc <= 100; cc+=10){
+            System.out.println( cc);
+        }
     }
     
 }
