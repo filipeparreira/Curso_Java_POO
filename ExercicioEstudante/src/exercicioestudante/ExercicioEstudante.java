@@ -15,6 +15,9 @@ public class ExercicioEstudante {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        double angulo = 90;
+        double radianos = (angulo * Math.PI)/180;
+        System.out.println(Math.tanh(radianos));
     }
     
 }
