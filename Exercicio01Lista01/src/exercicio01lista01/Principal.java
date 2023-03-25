@@ -12,7 +12,7 @@ public class Principal {
         Padaria padariaUser = new Padaria();
         Padaria padoca = new Padaria("Padoca", "João", "Rua Catapimbas");
         Padaria salomao = new Padaria("Padaria do Salomão", "Salomão", "Rua Salmos");
-        
+        Estacionamento carro1 = new Estacionamento("Carro", "HGH-0202", "15:13", "16:57");
         
         padoca.setFuncionarios(8);
         padoca.setMaxPaes(85);
@@ -24,6 +24,7 @@ public class Principal {
         salomao.setVendas(2125.47f);
         salomao.setCozinha(10, 5);
         
+        /*
         System.out.print("Digite o nome da Padaria: ");
         String nome = teclado.nextLine();
         System.out.print("Digite o nome do dono: ");
@@ -45,7 +46,7 @@ public class Principal {
         System.out.print("Digite a quantidade de panelas dentro da cozinha: ");
         int qtdePan = teclado.nextInt();
         teclado.nextLine();
-
+        
 
         
         padariaUser.setNome(nome);
@@ -55,11 +56,12 @@ public class Principal {
         padariaUser.setMaxPaes(numMaxPaes);
         padariaUser.setVendas(vendas);
         padariaUser.setCozinha(qtdeRef, qtdePan);
+        */
         
-        
-        System.out.println(padariaUser);
+        //System.out.println(padariaUser);
         System.out.println(padoca);
         System.out.println(salomao);
+        System.out.println(carro1);
         
     }
     

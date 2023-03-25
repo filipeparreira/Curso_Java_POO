@@ -97,7 +97,7 @@ public class Padaria {
     
     @Override 
     public String toString(){
-        return "\n--------------Padaria: " + this.nome + " --------------\nDono: " + this.dono +
+        return "\n-------------- " + this.nome + " --------------\nDono: " + this.dono +
                 "\nEndereço: " + this.endereco + "\nVendas Mensais: R$" + this.vendasMensais +
                 "\nQuantidade Máxima de pães: " + this.qtdeMaxPaes + "\nQuantidade de Funcionarios: " +
                 this.qtdeFuncionarios + "\n\nCozinha da padaria " + this.nome + ":" + "\nQuantos tipos de refeição? " +
