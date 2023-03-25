@@ -13,6 +13,11 @@ public class Principal {
         Padaria padoca = new Padaria("Padoca", "João", "Rua Catapimbas");
         Padaria salomao = new Padaria("Padaria do Salomão", "Salomão", "Rua Salmos");
         Estacionamento carro1 = new Estacionamento("Carro", "HGH-0202", "15:13", "16:57");
+        Computador computador1 = new Computador();
+        computador1.setNome("comp1").setMarca("Intel").setData(1, 1, 2001);
+        
+        
+        
         
         padoca.setFuncionarios(8);
         padoca.setMaxPaes(85);
@@ -62,6 +67,7 @@ public class Principal {
         System.out.println(padoca);
         System.out.println(salomao);
         System.out.println(carro1);
+        System.out.println(computador1);
         
     }
     
