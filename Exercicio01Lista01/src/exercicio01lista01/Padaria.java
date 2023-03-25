@@ -7,7 +7,7 @@ public class Padaria {
     private float vendasMensais;
     private int qtdeMaxPaes;
     private int qtdeFuncionarios;
-    Cozinha cozinha = new Cozinha();
+    private Cozinha cozinha;
     
     //Construtores
     public Padaria(){
@@ -17,6 +17,7 @@ public class Padaria {
         this.vendasMensais = 0f;
         this.qtdeMaxPaes = 0;
         this.qtdeFuncionarios = 0;
+        this.cozinha = new Cozinha();
     }
     public Padaria(String nome){
         this.nome = nome;
@@ -25,6 +26,7 @@ public class Padaria {
         this.vendasMensais = 0f;
         this.qtdeMaxPaes = 0;
         this.qtdeFuncionarios = 0;
+        this.cozinha = new Cozinha();
     }
     public Padaria(String nome, String dono){
         this.nome = nome;
@@ -33,6 +35,7 @@ public class Padaria {
         this.vendasMensais = 0f;
         this.qtdeMaxPaes = 0;
         this.qtdeFuncionarios = 0;
+        this.cozinha = new Cozinha();
     }
     public Padaria(String nome, String dono, String end){
         this.nome = nome;
@@ -41,6 +44,7 @@ public class Padaria {
         this.vendasMensais = 0f;
         this.qtdeMaxPaes = 0;
         this.qtdeFuncionarios = 0;
+        this.cozinha = new Cozinha();
     }
     
     // Mutadores
@@ -62,6 +66,10 @@ public class Padaria {
     public void setFuncionarios(int funcionarios){
         this.qtdeFuncionarios = funcionarios;
     }
+    public void setCozinha(int qtdeRef, int qtdePan){
+        this.cozinha = new Cozinha(qtdeRef, qtdePan);
+    }
+    
     
     //Acessores
     public String getNome(){
@@ -82,7 +90,20 @@ public class Padaria {
     public int getFuncionarios(){
         return this.qtdeFuncionarios;
     }
+    public String getCozinha(){
+        return this.cozinha.toString();
+    }
     
+    
+    @Override 
+    public String toString(){
+        return "\n--------------Padaria: " + this.nome + " --------------\nDono: " + this.dono +
+                "\nEndereço: " + this.endereco + "\nVendas Mensais: R$" + this.vendasMensais +
+                "\nQuantidade Máxima de pães: " + this.qtdeMaxPaes + "\nQuantidade de Funcionarios: " +
+                this.qtdeFuncionarios + "\n\nCozinha da padaria " + this.nome + ":" + "\nQuantos tipos de refeição? " +
+                this.cozinha.getTiposRef() + "\nQuantas panelas? " + this.cozinha.getQntPanelas();    
+    }
+
     
 }
 

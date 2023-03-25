@@ -35,5 +35,10 @@ public class Cozinha {
     }
     
     
+    @Override
+    public String toString(){
+        return "Quantidade de refeições: " + this.qtdePanelas + "\nQuantidade de panelas: " +
+                this.qtdePanelas;
+    }
     
 }
