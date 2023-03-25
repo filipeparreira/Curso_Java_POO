@@ -20,10 +20,10 @@ Programação Orientada à Objeto
 3
 7
 6
-5
+8
 
 Saída:
-Sua média na disciplina de POO é: 6.0
+Sua média na disciplina de Programação Orientada à Objeto é: 7.0
 
 
 ------------Informações do Estudante------------
