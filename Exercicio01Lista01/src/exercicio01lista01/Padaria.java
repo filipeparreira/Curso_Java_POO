@@ -8,9 +8,12 @@ public class Padaria {
     private int qtdeMaxPaes;
     private int qtdeFuncionarios;
     private Cozinha cozinha;
+    private Descobrir funcionarioMes;
+
     
     //Construtores
     public Padaria(){
+        this.funcionarioMes = new Descobrir();
         this.nome = "";
         this.dono = "";
         this.endereco = "";
@@ -20,6 +23,7 @@ public class Padaria {
         this.cozinha = new Cozinha();
     }
     public Padaria(String nome){
+        this.funcionarioMes = new Descobrir();
         this.nome = nome;
         this.dono = "";
         this.endereco = "";
@@ -29,6 +33,7 @@ public class Padaria {
         this.cozinha = new Cozinha();
     }
     public Padaria(String nome, String dono){
+        this.funcionarioMes = new Descobrir();
         this.nome = nome;
         this.dono = dono;
         this.endereco = "";
@@ -38,6 +43,7 @@ public class Padaria {
         this.cozinha = new Cozinha();
     }
     public Padaria(String nome, String dono, String end){
+        this.funcionarioMes = new Descobrir();
         this.nome = nome;
         this.dono = dono;
         this.endereco = end;
@@ -65,6 +71,7 @@ public class Padaria {
     }
     public void setFuncionarios(int funcionarios){
         this.qtdeFuncionarios = funcionarios;
+        this.funcionarioMes.setNumFuncionarios(funcionarios);
     }
     public void setCozinha(int qtdeRef, int qtdePan){
         this.cozinha = new Cozinha(qtdeRef, qtdePan);
@@ -101,9 +108,14 @@ public class Padaria {
                 "\nEndereço: " + this.endereco + "\nVendas Mensais: R$" + this.vendasMensais +
                 "\nQuantidade Máxima de pães: " + this.qtdeMaxPaes + "\nQuantidade de Funcionarios: " +
                 this.qtdeFuncionarios + "\n\nCozinha da padaria " + this.nome + ":" + "\nQuantos tipos de refeição? " +
-                this.cozinha.getTiposRef() + "\nQuantas panelas? " + this.cozinha.getQntPanelas();    
+                this.cozinha.getTiposRef() + "\nQuantas panelas? " + this.cozinha.getQntPanelas() + "\nFuncionario do mês: " +
+                getFuncionarioMes();    
     }
 
+    
+    public int getFuncionarioMes(){
+        return funcionarioMes.setFuncionarioMes();
+    }
     
 }
 
