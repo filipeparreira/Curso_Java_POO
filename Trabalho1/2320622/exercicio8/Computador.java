@@ -42,8 +42,6 @@ public class Computador {
         this.data = new Data(dia, mes, ano);
     }
     
-    
-    //Acessores 
     public String getNome(){
         return this.nome;
     }
@@ -54,7 +52,6 @@ public class Computador {
         return this.data.getData();
     }
     
-    //Mutadores
     public Computador setNome(String nome){
         this.nome = nome;
         return this;
