@@ -1,5 +1,9 @@
 package exercicio9;
-
+/*
+Exercicio 9
+Autor(es): Filipe Augusto Parreira Almeida
+Data: 27/03/2023
+*/
 public class Padaria extends EstabelecimentoComercial {
     private int qtdeMaxPaes;
     private Cozinha cozinha;
