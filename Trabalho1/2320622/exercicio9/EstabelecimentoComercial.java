@@ -1,5 +1,9 @@
 package exercicio9;
-
+/*
+Exercicio 7
+Autor(es): Filipe Augusto Parreira Almeida
+Data: 27/03/2023
+*/
 public class EstabelecimentoComercial {
     private String nome;
     private String dono;
