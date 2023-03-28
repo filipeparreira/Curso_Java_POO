@@ -31,9 +31,7 @@ public class Data {
         this.mes = mes;
         this.ano = ano;
     }
-    
-    
-    //Acessores
+   
     public String getData(){
         return this.dia + "/" + this.mes + "/" + this.ano;
     }
@@ -46,9 +44,7 @@ public class Data {
     public int getAno(){
         return this.ano;
     }
-    
-    
-    //Mutadores
+   
     public void setData(int dia, int mes, int ano){
         this.dia = dia;
         this.mes = mes;
