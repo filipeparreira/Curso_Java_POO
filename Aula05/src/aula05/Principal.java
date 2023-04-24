@@ -79,7 +79,7 @@ public class Principal {
         }
         public String toString(){
             return "Conta nº: " + this.getNumConta() + "\nDono: " + this.getDono() + "\nTipo de Conta: " + this.getTipo() +
-                    "\nSaldo: R$" + this.getSaldo() + "\nStatus: " + this.getStatus();
+                    "\nSaldo: R$" + this.getSaldo() + "\nStatus: " + this.getStatus() + "\n\n";
         }
     }
     public Principal(){
