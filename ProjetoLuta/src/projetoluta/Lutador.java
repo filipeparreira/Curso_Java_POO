@@ -109,11 +109,11 @@ public class Lutador implements iLutador{
     
     @Override
     public void apresentar() {
-        System.out.println("Lutador: " + this.getNome() + "\nOrigem: " + this.getNascionalidade() +
+        System.out.println("-----------------------------\nLutador: " + this.getNome() + "\nOrigem: " + this.getNascionalidade() +
                 "\nCategoria: " + this.getCategoria() + "\nIdade: " + this.getIdade() +
                 " anos\nPeso: " + this.getPeso() + " Kg\nAltura: " + this.getAltura() +
                 " m\nVitórias: " + this.getVitorias() + "\nDerrotas: " + this.getDerrotas() +
-                "\nEmpates: " + this.getEmpates()); 
+                "\nEmpates: " + this.getEmpates() + "\n-----------------------------\n"); 
     }
 
     @Override
