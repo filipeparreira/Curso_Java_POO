@@ -30,7 +30,6 @@ public class Luta {
             desafiado.apresentar();
             desafiante.apresentar();
             vencedor = gerador.nextInt(0, 3);
-            System.out.println("Valor: " + vencedor);
             switch (vencedor){
                 case 0:
                     System.out.println("Empatou!");
