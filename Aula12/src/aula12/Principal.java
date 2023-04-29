@@ -12,9 +12,9 @@ public class Principal {
         a1.alimentar();
         a1.locomover();
         
-        //a1 = new Ave();
-        ((Ave) a1).alimentar();
-        ((Ave) a1).locomover();
+        a1 = new Ave();
+        a1.alimentar();
+        a1.locomover();
     }
     
 }
